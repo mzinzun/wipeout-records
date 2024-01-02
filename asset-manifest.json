@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/wipeout-records/static/css/main.6826f79a.css",
-    "main.js": "/wipeout-records/static/js/main.ec45e59a.js",
+    "main.js": "/wipeout-records/static/js/main.e44a281d.js",
     "static/js/787.d356ae27.chunk.js": "/wipeout-records/static/js/787.d356ae27.chunk.js",
     "static/media/wipoutImg.png": "/wipeout-records/static/media/wipoutImg.c70e3060705fb3991ce5.png",
     "index.html": "/wipeout-records/index.html",
     "main.6826f79a.css.map": "/wipeout-records/static/css/main.6826f79a.css.map",
-    "main.ec45e59a.js.map": "/wipeout-records/static/js/main.ec45e59a.js.map",
+    "main.e44a281d.js.map": "/wipeout-records/static/js/main.e44a281d.js.map",
     "787.d356ae27.chunk.js.map": "/wipeout-records/static/js/787.d356ae27.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6826f79a.css",
-    "static/js/main.ec45e59a.js"
+    "static/js/main.e44a281d.js"
   ]
 }
