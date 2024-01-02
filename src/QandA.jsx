@@ -3,7 +3,7 @@ import React from "react";
 function QandA() {
     return (
         <>
-        <div>
+        <div className="p-4">
             <h3><b>Frequently Asked Questions</b></h3>
 
             <p><b>Q: What is an expungement?</b></p>
@@ -18,7 +18,7 @@ function QandA() {
 
             <p><b>Q: How easy is it to get a record expungement?</b></p>
 
-            <p>A: The process of expungement, which involves removing or sealing criminal records, varies significantly depending on jurisdiction and the specific circumstances of the case. Initiating the expungement process typically involves filing a petition or application with the court. This may require gathering various documents and filling out specific forms. Legal assistance may be beneficial..</p>
+            <p><b>A:</b> The process of expungement, which involves removing or sealing criminal records, varies significantly depending on jurisdiction and the specific circumstances of the case. Initiating the expungement process typically involves filing a petition or application with the court. This may require gathering various documents and filling out specific forms. Legal assistance may be beneficial..</p>
         </div>
         </>
     )

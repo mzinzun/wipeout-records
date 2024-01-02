@@ -1,6 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar, NavDropdown, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home'
 import Contact from './Contact'
 import MenuNav from './MenuNav'
@@ -8,11 +7,11 @@ import './App.css'
 
 function App() {
 	return (
-		<Router basename="/wipeout-records">
+		<Router basename="/wipeout-records/">
 			<div className='container-fluid wrapper'>
 				<header className='row w-100 justify-content-between align-items-center bg-dark'>
 					<div className='col-3 logo p-0 m-0'>
-						<img className='img img-fluid ' src="./assets/wipoutImg3.png" alt="WipeOut Records logo" />
+						<Link to='/home'><img className='img img-fluid ' src="./assets/wipoutImg3.png" alt="WipeOut Records logo" /></Link>
 					</div>
 					<h1 className='h1 menuTitle display-1 col-6 text-center'>WipeOut Records</h1>
 					<div className='col-3 '>
@@ -22,8 +21,9 @@ function App() {
 
 				<main>
 					<Routes>
+						<Route exact path="/" element={<Home />} />
 						<Route exact path="/home" element={<Home />} />
-						<Route path="/contact" element={<Contact />} />
+						<Route exact path="/contact" element={<Contact />} />
 					</Routes>
 				</main>
 				{/* <footer><p>This is my footer</p></footer> */}
