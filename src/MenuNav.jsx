@@ -7,8 +7,8 @@ function MenuNav() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-danger"/>
             <Navbar.Collapse id="basic-navbar-nav navbar row">
                 <Nav className="navbar col row justify-content-end">
-                    <Nav.Link className="menuNav col-md-3" href="/">Home</Nav.Link>
-                    <Nav.Link className="menuNav col-md-3" href="/contact">Contact</Nav.Link>
+                    <NavLink to="/home" className="menuNav col-md-3" >Home</NavLink>
+                    <NavLink to='/contact' className="menuNav col-md-3" >Contact</NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

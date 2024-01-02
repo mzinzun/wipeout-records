@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navbar, NavDropdown, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Home from './Home'
 import Contact from './Contact'
 import MenuNav from './MenuNav'
@@ -7,21 +8,21 @@ import './App.css'
 
 function App() {
 	return (
-		<Router base="https://mzinzun.github.io/wipeout-records">
+		<Router basename="/wipeout-records">
 			<div className='container-fluid wrapper'>
 				<header className='row w-100 justify-content-between align-items-center bg-dark'>
 					<div className='col-3 logo p-0 m-0'>
 						<img className='img img-fluid ' src="./assets/wipoutImg3.png" alt="WipeOut Records logo" />
 					</div>
 					<h1 className='h1 menuTitle display-1 col-6 text-center'>WipeOut Records</h1>
-
-
-					<div className='col-3 '><MenuNav /></div>
+					<div className='col-3 '>
+						<MenuNav />
+					</div>
 				</header>
 
 				<main>
 					<Routes>
-						<Route exact path="/" element={<Home />} />
+						<Route exact path="/home" element={<Home />} />
 						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</main>
