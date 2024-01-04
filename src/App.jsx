@@ -7,8 +7,9 @@ import './App.css'
 
 function App() {
 	return (
-		<Router basename="/wipeout-records/">
+
 			<div className='container-fluid wrapper'>
+				<Router basename="/wipeout-records">
 				<header className='row w-100 justify-content-between align-items-center bg-dark'>
 					<div className='col-3 logo p-0 m-0'>
 						<Link to='/home'><img className='img img-fluid ' src="./assets/wipoutImg3.png" alt="WipeOut Records logo" /></Link>
@@ -22,14 +23,15 @@ function App() {
 				<main>
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route exact path="/home" element={<Home />} />
-						<Route exact path="/contact" element={<Contact />} />
+						<Route path="/home" element={<Home />} />
+						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</main>
 				{/* <footer><p>This is my footer</p></footer> */}
 				{/* <div id="bg-img"></div> */}
+				</Router>
 			</div>
-		</Router>
+
 	)
 }
 
