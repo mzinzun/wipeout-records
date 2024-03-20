@@ -36,7 +36,7 @@ z-index: 10;
   width: 100vw;
   display: grid;
   grid-template-rows: 150px 1fr 50px;
-  /* padding: 2% 5%; */
+  padding: 2% 0 !important;
 
 }
 main {
