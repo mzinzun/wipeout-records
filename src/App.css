@@ -35,7 +35,7 @@ z-index: 10;
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 150px 1fr 50px;
+  grid-template-rows: 170px 1fr 50px;
   padding: 2% 0 !important;
 
 }
@@ -74,7 +74,7 @@ header {
 .menuTitle {
   /* border: thin solid blue; */
   color: rgb(201 3 3) !important;
-  font-size: clamp(1.5rem, 5vw, 5.5rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: bold;
   margin: 0 auto;
   padding: 0;
