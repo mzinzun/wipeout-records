@@ -23,7 +23,7 @@ function Contact() {
         e.preventDefault();
 
         // Handle form submission here
-        emailjs.sendForm('service_tpnhujg', 'profiler_contact_form', e.target).then(
+        emailjs.sendForm('service_r2dqyri', 'template_kucmlrw', e.target).then(
             function (response) {
               console.log('SUCCESS!', response.status, response.text);
             },
