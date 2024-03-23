@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -22,15 +23,24 @@ function Contact() {
         e.preventDefault();
 
         // Handle form submission here
+        emailjs.sendForm('service_tpnhujg', 'profiler_contact_form', e.target).then(
+            function (response) {
+              console.log('SUCCESS!', response.status, response.text);
+            },
+            function (err) {
+              console.log('FAILED...', err);
+            },
+          );
 
         // Reset form data
         setFormData({
             legalName: '',
             arrestingNames: '',
-            address: '',
-            phoneNumber: '',
+            email: '',
+            phone: '',
             dob: '',
             pendingCharges: '',
+            contactMethod: '',
             additionalInfo: ''
         });
     };
@@ -47,6 +57,7 @@ function Contact() {
                     type="text"
                     className="form-control"
                     id="legalName"
+                    name = "legalName"
                     placeholder="Enter legal name"
                     value={formData.legalName}
                     onChange={handleChange} />
@@ -57,38 +68,73 @@ function Contact() {
                     type="text"
                     className="form-control"
                     id="arrestingNames"
+                    name="arrestingNames"
                     placeholder="Enter legal name"
                     value={formData.arrestingNames}
                     onChange={handleChange} />
                     <label htmlFor="arrestingNames" className='text-danger'>Arresting Name:</label>
                 </div>
                 <div className="form-floating  mb-3">
-                    <input type="email" className="form-control" id="email" placeholder="Enter email" value={formData.email} onChange={handleChange} />
+                    <input className="form-control"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                        value={formData.email}
+                        onChange={handleChange} />
                     <label htmlFor="email" className='text-danger'>Email:</label>
                 </div>
                 <div className="form-floating  mb-3">
-                    <input type="tel" className="form-control" id="phone" placeholder="Enter phone" value={formData.phone} onChange={handleChange} />
+                    <input className="form-control"
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter phone"
+                        value={formData.phone}
+                        onChange={handleChange} />
                     <label htmlFor="phone" className="form-label text-danger">Phone:</label>
                 </div>
                 <div className="form-floating  mb-3">
-                    <input type="date" className="form-control" id="dob" placeholder="Enter Date of Birth" value={formData.dob} onChange={handleChange} />
+                    <input className="form-control"
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        placeholder="Enter Date of Birth"
+                        value={formData.dob}
+                        onChange={handleChange} />
                     <label htmlFor="dob" className="form-label text-danger">Date of birth:</label>
                 </div>
-                <div className="form-floating mb-3">
-                    <textarea className="form-control" id="additionalInfo" rows="3" value={formData.additionalInfo} onChange={handleChange}></textarea>
-                    <label htmlFor="additionalInfo" className='text-danger text-danger'>Anything i will need to know as I do my search?</label>
-                </div>
                 <div className="form-floating  mb-3">
-                    <input type="text" className="form-control" id="pendingCharges" placeholder="Pending Charges" value={formData.pendingCharges} onChange={handleChange} />
+                    <input className="form-control"
+                        type="text"
+                        id="pendingCharges"
+                        name="pendingCharges"
+                        placeholder="Pending Charges"
+                        value={formData.pendingCharges}
+                        onChange={handleChange} />
                     <label htmlFor="pendingCharges" className="form-label text-danger">Pending Charges:</label>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="contactMethod" className='text-danger text-danger'>Preferred Contact Method:</label>
-                    <select className="form-select" id="contactMethod" value={formData.contactMethod} onChange={handleChange}>
+                    <select className="form-select"
+                        id="contactMethod"
+                        name="contactMethod"
+                        value={formData.contactMethod}
+                        onChange={handleChange}>
                         <option value="email">Email</option>
                         <option value="phone">Phone</option>
                     </select>
                 </div>
+                <div className="form-floating mb-3">
+                    <textarea className="form-control" rows="3"
+                        id="additionalInfo"
+                        name="additionalInfo"
+                        value={formData.additionalInfo}
+                        onChange={handleChange}>
+                    </textarea>
+                    <label htmlFor="additionalInfo" className='text-danger text-danger'>Anything i will need to know as I do my search?</label>
+                </div>
+
 
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
