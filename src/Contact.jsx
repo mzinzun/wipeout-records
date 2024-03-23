@@ -23,7 +23,9 @@ function Contact() {
         e.preventDefault();
 
         // Handle form submission here
-        emailjs.sendForm('service_r2dqyri', 'template_kucmlrw', e.target).then(
+        emailjs.sendForm('service_r2dqyri', 'template_kucmlrw', e.target,{
+            publicKey: '7RtmhZ6uhMQT8l8TU',
+          }).then(
             function (response) {
               console.log('SUCCESS!', response.status, response.text);
             },
