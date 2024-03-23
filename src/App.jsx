@@ -14,7 +14,7 @@ function App() {
 					<div className='col-3 logo p-0 m-0'>
 						<Link to='/home'><img className='img img-fluid ' src="./assets/wipoutImg3.png" alt="WipeOut Records logo" /></Link>
 					</div>
-					<h1 className='h1 menuTitle display-1 col-6 text-center'>WipeOut Records</h1>
+					<h1 className='h1 menuTitle display-1 col-6 text-center'>WipeOut Records XPungement</h1>
 					<div className='col-3 '>
 						<MenuNav />
 					</div>
