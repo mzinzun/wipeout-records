@@ -5,10 +5,11 @@ function Contact() {
     const [formData, setFormData] = useState({
         legalName: '',
         arrestingNames: '',
-        address: '',
-        phoneNumber: '',
+        email: '',
+        phone: '',
         dob: '',
         pendingCharges: '',
+        contactMethod: '',
         additionalInfo: ''
     });
 
@@ -52,7 +53,7 @@ function Contact() {
             <h1>Contact</h1>
             <p>email: wipeoutrecordsxp@gmail.com</p>
             <p>Fill out the form below and I will get back to you as soon as possible.</p>
-            <p>Or you can call me at 555-555-5555</p>
+            <p>Or you can call me at (812)650-6800</p>
             <form onSubmit={handleSubmit}>
                 <div className="form-floating mb-3">
                     <input
